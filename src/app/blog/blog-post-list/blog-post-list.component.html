@@ -1,0 +1,11 @@
+<div id="blog">
+  <div id="headerPadding"> </div>
+  <a *ngFor="let post of posts" [routerLink]="post.url">
+    <div class="blog-post">
+      <div class="fade"></div>
+      <app-blog-post [post]="post"></app-blog-post>
+    </div>
+  </a>
+  <div class="pagination">
+  </div>
+</div>

@@ -1,0 +1,152 @@
+{
+  "tags": [
+    "SFDC",
+    "CSharp",
+    "Git",
+    "Perl",
+    "Apex"
+  ],
+  "posts": [
+    {
+      "path": "2017-12-12-How-to-Write-Async-Code",
+      "title": "10 steps to avoid failure with async/await in C#",
+      "tags": [
+        "CSharp"
+      ]
+    },
+    {
+      "path": "2016-09-11-Geomob-Presentation",
+      "title": "Presenting to #Geomob",
+      "tags": []
+    },
+    {
+      "path": "2016-06-01-Visualising-London",
+      "title": "Visualising London",
+      "tags": []
+    },
+    {
+      "path": "2015-08-28-Git-Branching-Tools",
+      "title": "Tools for effective branching structures in git",
+      "tags": [
+        "Git"
+      ]
+    },
+    {
+      "path": "2015-08-12-Bundle-App-SFDC",
+      "title": "Bundling App::SFDC for fun and profit",
+      "tags": [
+        "SFDC",
+        "Perl"
+      ]
+    },
+    {
+      "path": "2015-05-03-logging-trivial-or-why-to-hold-off",
+      "title": "Logging::Trivial - or, why to hold off on that logging module you wrote",
+      "tags": [
+        "Perl"
+      ]
+    },
+    {
+      "path": "2015-04-27-Creating-Attachments-with-WWW-SFDC",
+      "title": "Creating attachments with WWW::SFDC",
+      "tags": [
+        "SFDC",
+        "Perl"
+      ]
+    },
+    {
+      "path": "2015-04-24-a-new-pattern-for-apex-triggers",
+      "title": "A New Pattern for Apex Triggers",
+      "tags": [
+        "Apex",
+        "SFDC"
+      ]
+    },
+    {
+      "path": "2015-02-02-Running-unit-tests-using-WWW-SFDC",
+      "title": "Running unit tests using WWW::SFDC",
+      "tags": [
+        "SFDC",
+        "Perl"
+      ]
+    },
+    {
+      "path": "2015-01-23-Why-perl-for-SFDC-Tools",
+      "title": "Why Perl for Salesforce Tools?",
+      "tags": [
+        "SFDC",
+        "Perl"
+      ]
+    },
+    {
+      "path": "2015-01-21-WWW-SFDC-metadata-and-manifests",
+      "title": "WWW::SFDC - Metadata, Manifests and Zip Files",
+      "tags": [
+        "SFDC",
+        "Perl"
+      ]
+    },
+    {
+      "path": "2015-01-19-Introducing-WWW-SFDC",
+      "title": "Introducing WWW::SFDC - a perl module for Salesforce.com interactions",
+      "tags": [
+        "SFDC",
+        "Perl"
+      ]
+    },
+    {
+      "path": "2015-01-16-Handling-repository-rewrites-in-git",
+      "title": "Handling repository rewrites with git",
+      "tags": [
+        "Git"
+      ]
+    },
+    {
+      "path": "2015-01-15-Git-whitespace-with-SFDC",
+      "title": "How to handle whitespace with Salesforce.com and git",
+      "tags": [
+        "Git",
+        "SFDC"
+      ]
+    },
+    {
+      "path": "2015-01-15-Compress-your-SFDC-profiles",
+      "title": "How and why to compress your Salesforce.com profiles",
+      "tags": [
+        "Git",
+        "SFDC"
+      ]
+    },
+    {
+      "path": "2014-12-09-Salesforce-metadata-singlePackage-option",
+      "title": "The singlePackage option in Salesforce.com metadata deployments",
+      "tags": [
+        "SFDC"
+      ]
+    },
+    {
+      "path": "2014-09-16-XML-Validating-Regex",
+      "title": "A Regex for validating XML text",
+      "tags": []
+    },
+    {
+      "path": "2014-08-29-Mandelbrot-set",
+      "title": "The Mandelbrot set in Javascript",
+      "tags": []
+    },
+    {
+      "path": "2014-08-21-Run-all-tests-in-a-Salesforce-deployment",
+      "title": "Running all tests during a Salesforce.com deployment",
+      "tags": [
+        "SFDC"
+      ]
+    },
+    {
+      "path": "2014-08-19-Javascript-for-SFDC-Deployments",
+      "title": "Writing Salesforce ant deployment tasks using Javascript",
+      "tags": [
+        "SFDC"
+      ]
+    }
+  ]
+}
