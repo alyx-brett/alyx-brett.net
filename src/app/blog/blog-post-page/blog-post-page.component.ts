@@ -17,9 +17,21 @@ export class BlogPostPageComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap
       .subscribe((paramMap: ParamMap) => {
-        this.blogService.getPost(paramMap.get('id')).subscribe((post: BlogPostViewModel) => {
-          this.post = post;
-        });
+        var id = '';
+        if (paramMap.has('id')) 
+        {
+          id = paramMap.get('id');         
+        }
+        else {
+          id = [paramMap.get('year'), paramMap.get('month'), paramMap.get('day'), paramMap.get('title')]
+          .join('-')
+          .replace('.html', '');
+        }
+
+      this.blogService.getPost(id).subscribe((post: BlogPostViewModel) => {
+        this.post = post;
+      });
+
       });
   }
 
