@@ -5,18 +5,14 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './core/title/title.component';
 import { AppRoutingModule } from './services/app-routing.module';
-import { NavComponent } from './core/nav/nav.component';
 import { BlogModule } from './blog/blog.module';
 import {MarkdownModule} from 'ngx-markdown';
-import { AboutPageComponent } from './pages/about/about-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitleComponent,
-    NavComponent,
-    AboutPageComponent
+    TitleComponent
   ],
   imports: [
     BrowserModule,
