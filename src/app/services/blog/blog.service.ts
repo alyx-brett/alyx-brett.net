@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable, Optional} from '@angular/core';
 import postsCatalogue from '../../../assets/posts/posts-catalogue.json';
 import { HttpClient} from '@angular/common/http';
 import {Observable, of, forkJoin} from 'rxjs';
@@ -29,12 +29,14 @@ export class BlogPostViewModel {
 }
 
 export class BlogPageViewModel {
-  constructor(pageNumber: number, numberOfPages: number, posts: BlogPostViewModel[]) {
+  constructor(pageNumber: number, numberOfPages: number, posts: BlogPostViewModel[], pageTag: any) {
     this.pageNumber = pageNumber;
     this.numberOfPages = numberOfPages;
     this.posts = posts;
+    this.tag = pageTag;
   }
 
+  tag: string;
   pageNumber: number;
   numberOfPages: number;
   posts: BlogPostViewModel[];
@@ -69,7 +71,6 @@ export class BlogService {
     if (this.fetchedPosts.has(record.path)) {
       return of(this.fetchedPosts.get(record.path));
     }
-    const self = this;
     return this.http.get('/assets/posts/' + record.path + '.md', {responseType: 'text'}).pipe(map(
       (response: string) => {
         const matches = this.titleRegexp.exec(record.path);
@@ -89,18 +90,30 @@ export class BlogService {
     ));
   }
 
-  getPage(pageNumber: number): Observable<BlogPageViewModel> {
-    if (pageNumber > this.numberOfPages) {
-      return this.getPage(0);
+  getPage(pageNumber: number, tag: string): Observable<BlogPageViewModel> {
+    if (!tag) {
+      return this.getPageNoTag(pageNumber);
     }
-    return forkJoin(this.posts
+    const posts = this.posts.filter(p => p.tags.indexOf(posts) > -1);
+    return this.fetchThePages(pageNumber, posts, tag);
+  }
+
+  private getPageNoTag(pageNumber: number): Observable<BlogPageViewModel> {
+    if (pageNumber > this.numberOfPages) {
+      return this.getPageNoTag(0);
+    }
+    return this.fetchThePages(pageNumber, this.posts, null);
+  }
+
+  private fetchThePages(pageNumber: number, blogPostRecords: BlogPostRecord[], tag: string) {
+    return forkJoin(blogPostRecords
       .slice(pageNumber * this.postsPerPage, (1 + pageNumber) * this.postsPerPage)
       .map(post => this.fetchPost(post))
     )
       .pipe(
         map(
           (posts: BlogPostViewModel[]) => {
-            return new BlogPageViewModel(pageNumber, this.numberOfPages, posts);
+            return new BlogPageViewModel(pageNumber, this.numberOfPages, posts, tag);
           }
         )
       );

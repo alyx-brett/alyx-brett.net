@@ -1,11 +1,21 @@
 <div id="blog">
   <div id="headerPadding"> </div>
-  <a *ngFor="let post of posts" [routerLink]="post.url">
-    <div class="blog-post">
-      <div class="fade"></div>
-      <app-blog-post [post]="post"></app-blog-post>
+    <div class="blog-post" *ngFor="let post of posts">
+
+      <a [routerLink]="post.url">
+      <div style="max-height:20em; position: relative; overflow: hidden">
+          <div class="fade"></div>
+        <app-blog-post [post]="post"></app-blog-post>
+        </div>
+      </a>
+      <app-blog-post-tags [tags]="post?.tags"></app-blog-post-tags>
     </div>
-  </a>
   <div class="pagination">
+    <a
+      *ngFor="let pageNumber of pageNumbers"
+      [routerLink]=""
+      [queryParams]="{page: pageNumber}"
+      queryParamsHandling="merge"
+    >{{pageNumber}}</a>
   </div>
 </div>
