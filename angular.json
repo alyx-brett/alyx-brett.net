@@ -43,7 +43,8 @@
               "node_modules/prismjs/components/prism-csharp.min.js",
               "src/assets/js/d3/d3.min.js",
               "src/assets/js/sql/sql.js",
-              "src/assets/london-vis/vis.js"
+              "src/assets/london-vis/vis.js",
+              "src/assets/js/mathjax.js"
             ]
           },
           "configurations": {

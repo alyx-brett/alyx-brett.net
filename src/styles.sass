@@ -2,6 +2,8 @@
 @import "raleway"
 @import "colours"
 
+$fontsize: 14px
+
 @mixin fade()
   background: -moz-linear-gradient(top, rgba(251,251,251,0) 0%, rgba(251,251,251,1) 100%)
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0)), color-stop(100%,rgba(251,251,251,1)))
@@ -103,7 +105,7 @@ body
   font-family: "Segoe UI", arial, sans-serif
   font-style: normal
   text-align: center
-  font-size: 14px
+  font-size: $fontsize
   overflow: hidden
   margin: 0
   padding: 0
@@ -186,6 +188,7 @@ header
   position: absolute
   width: 100vw
 
+
 #content
   opacity: 1
   text-align: left
@@ -201,6 +204,12 @@ header
   #blog
     @extend #contentDiv
     @include scrollbar()
+    h2:before      
+      content: ''
+      display: block
+      height:      15em
+      margin-top: -15em
+      font-size: $fontsize
     .blog-post
       width: 90%
       max-width: 80em

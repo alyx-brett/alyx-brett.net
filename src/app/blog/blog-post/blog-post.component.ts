@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {BlogPostViewModel} from '../../services/blog/blog.service';
 
 @Component({
@@ -6,13 +6,8 @@ import {BlogPostViewModel} from '../../services/blog/blog.service';
   templateUrl: './blog-post.component.html',
   styleUrls: ['./blog-post.component.css']
 })
-export class BlogPostComponent implements OnInit {
+export class BlogPostComponent {
 
   @Input()
   post: BlogPostViewModel;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 }

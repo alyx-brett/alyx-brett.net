@@ -3,10 +3,6 @@ import { RouterModule, Routes, ActivatedRouteSnapshot, RouterStateSnapshot } fro
 import { BlogPostListComponent } from '../blog/blog-post-list/blog-post-list.component';
 import {BlogPostPageComponent} from '../blog/blog-post-page/blog-post-page.component';
 
-function calculateRedirection(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-  return 'blog/' + route.url.join('-').replace('.html', '');
-}
-
 const routes: Routes = [
   { path: '', redirectTo: 'blog', pathMatch: 'full'},
   { path: 'blog/:id', component: BlogPostPageComponent},
@@ -15,7 +11,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, 
+    {anchorScrolling: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

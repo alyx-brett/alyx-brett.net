@@ -8,6 +8,11 @@
   ],
   "posts": [
     {
+      "path": "2020-05-29-Spirograph-Maths-I",
+      "title": "Maths for Spirograph, Part I",
+      "tags": []
+    },
+    {
       "path": "2017-12-12-How-to-Write-Async-Code",
       "title": "10 steps to avoid failure with async/await in C#",
       "tags": [
