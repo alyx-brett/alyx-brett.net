@@ -1,4 +1,4 @@
-In this post, I'll derive expressions about rotations in spirograph systems. The first section runs through some simple number theory; you might choose to [skip to the good stuff](#2-simple-patterns).
+In this post, I'll derive expressions about rotations in spirograph systems. The first section runs through some simple number theory; you might choose to skip straight to section 2.
 
 This builds on [Aaron's Post](https://www.wildgears.com/math-and-predictions.html), which is more accessible.
 
@@ -50,7 +50,9 @@ $$gcd(A,B) = \frac{AB}{lcm(A,B)}$$
 
 ## 2. Simple Patterns
 
-Suppose a part $\mathbf{A}$ with $A$ teeth rotates against a part $\mathbf{B}$ with $B$ teeth, for example a wheel inside a ring. Each time A rotates one full turn relative to B, it moves around $A$ teeth inside B, and the pattern it leaves will repeat once it returns to its starting point, i.e. when a whole number of rotations if $A$ corresponds with a whole number of traversals of $B$. As a simple example, if an 80 wheel rotates inside a 120 ring, then after 3 rotations of the wheel it would have travelled 240 teeth, which is 2 whole traversals.
+Suppose a part $\mathbf{A}$ with $A$ teeth rotates against a part $\mathbf{B}$ with $B$ teeth, for example a wheel inside a ring. Each time A rotates one full turn relative to B, it moves around $A$ teeth inside B, and the pattern it leaves will repeat once it returns to its starting point, i.e. when a whole number of rotations if $A$ corresponds with a whole number of traversals of $B$. As a simple example, if an 84 wheel rotates inside a 140 ring, then after 5 rotations of the wheel it would have travelled 420 teeth, which is 3 whole traversals.
+
+> ![A simple pattern](/assets/img/spiro/simple.jpg)
 
 So:
 
@@ -76,6 +78,8 @@ The gap between the points is $B \over \text{number of points}$, i.e. just $gcd(
 
 In a compound pattern, a wheel $\mathbf{A}$ rotates inside a hole $\mathbf{B}$ cut from a wheel $\mathbf{C}$, which in turn rotates against a static $\mathbf{D}$, with teeth $A$, $B$, $C$, $D$ respectively.
 
+![A compound pattern](/assets/img/spiro/compound.jpg)
+
 Now we know from *(2.1)* that $\mathbf{C}$ will complete $D\over gcd(C,D)$ rotations inside $\mathbf{D}$, in which time $\mathbf{B}$ must also rotate the same number of times, since it is on the same piece. Thus, $\mathbf{A}$ must traverse a whole multiple of $B \frac{D}{gcd(C,D)}$ teeth to return to the starting point.
 
 Therefore let $n, m \in \mathbb{N} $ such that $$nA = mB\frac{D}{gcd(C,D)}$$.
@@ -99,3 +103,5 @@ $$\frac{lcm(A,B\frac{D}{gcd(C,D)})}{B}$$
 ## 4. Wrapping up
 
 I found these results handy for working out which combinations of wheels and rings to use in my spirographing; the next things I'm planning to do are write about symmetries of spirographs and maybe at some point share a spreadsheet automating these calculations.
+
+<script>MathJax.typeset()</script>
