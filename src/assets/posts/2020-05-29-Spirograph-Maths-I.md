@@ -10,7 +10,7 @@ The natural numbers, written $\mathbb{N}$, are the numbers $1, 2, 3 \ldots$
 
 #### 1.2 Divisors
 
-A natural number ${A}$ *divides* or *is a divisor of* another natural number \\(B\\) if there exists some natural number ${n}$ such that $nA = B$.
+A natural number ${A}$ *divides* or *is a divisor of* another natural number ${B}$ if there exists some natural number ${n}$ such that $nA = B$.
 
 We notate ${A}$ is a divisor of ${B}$ by $A|B$.
 
@@ -105,7 +105,7 @@ This will be the number of 'points' that the design has - although given the com
 
 #### 3.2 The number of rotations of the middle part in a 3-part system
 
-The middle component (outer edge $C$, inner edge ${B}$) must rotate $m \frac{D}{gcd(C,D)}$ times, which is to say that the number of rotations is:
+The middle component (outer edge ${C}$, inner edge ${B}$) must rotate $m \frac{D}{gcd(C,D)}$ times, which is to say that the number of rotations is:
 
 > $\frac{lcm(A,B\frac{D}{gcd(C,D)})}{B}$
 
