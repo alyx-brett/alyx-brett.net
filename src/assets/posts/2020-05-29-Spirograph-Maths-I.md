@@ -1,4 +1,6 @@
-In this post, I'll derive expressions about rotations in spirograph systems. The first section runs through some simple number theory; you might choose to [skip to the good stuff](http://localhost:4200/blog/2020-05-29-Spirograph-Maths-I#2-simple-patterns).
+In this post, I'll derive expressions about rotations in spirograph systems. The first section runs through some simple number theory; you might choose to [skip to the good stuff](#2-simple-patterns).
+
+This builds on [Aaron's Post](https://www.wildgears.com/math-and-predictions.html), which is more accessible.
 
 ## 1. Lowest Common Multiple and Greatest Common Divisor
 
