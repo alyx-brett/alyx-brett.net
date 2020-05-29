@@ -31,6 +31,7 @@
             "styles": [
               "src/styles.sass",
               "node_modules/prismjs/themes/prism-twilight.css",
+              "node_modules/katex/dist/katex.min.css",
               "src/styles/london-vis.sass"
             ],
             "stylePreprocessorOptions": {
@@ -41,10 +42,11 @@
             "scripts": [
               "node_modules/prismjs/prism.js",
               "node_modules/prismjs/components/prism-csharp.min.js",
+              "node_modules/katex/dist/katex.min.js",
               "src/assets/js/d3/d3.min.js",
               "src/assets/js/sql/sql.js",
               "src/assets/london-vis/vis.js",
-              "src/assets/js/mathjax.js"
+              "src/assets/js/twitter.js"
             ]
           },
           "configurations": {

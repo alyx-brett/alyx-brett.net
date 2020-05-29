@@ -9,7 +9,6 @@ import {BlogPostViewModel, BlogService} from '../../services/blog/blog.service';
 })
 export class BlogPostPageComponent implements OnInit {
   post: BlogPostViewModel;
-  scrollPosition: [number, number];
 
   constructor(
     private route: ActivatedRoute,

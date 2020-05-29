@@ -14,6 +14,5 @@ During and after my talk, this happened!
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Tonight&#39;s final <a href="https://twitter.com/hashtag/geomob?src=hash">#geomob</a> speaker: Alexander Brett telling us about his London visualisation <a href="https://t.co/Tt5FuQpRd2">https://t.co/Tt5FuQpRd2</a></p>&mdash; geomob (@geomob) <a href="https://twitter.com/geomob/status/773594604813910017">September 7, 2016</a></blockquote>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Great set of presentations <a href="https://twitter.com/geomob">@geomob</a>, coding cartography from Alexander Brett won <a href="https://twitter.com/hashtag/locationdata?src=hash">#locationdata</a></p>&mdash; henry_mcneill (@henry_mcneill) <a href="https://twitter.com/henry_mcneill/status/773600530564321280">September 7, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Thank you everyone!

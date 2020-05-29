@@ -12,7 +12,7 @@ export class BlogPostListComponent implements OnInit {
 
   blogPage: BlogPageViewModel;
   posts: BlogPostViewModel[];
-  private pageNumbers: number[];
+  pageNumbers: number[];
 
   constructor(
     private blogService: BlogService,

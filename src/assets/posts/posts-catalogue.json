@@ -22,7 +22,8 @@
     {
       "path": "2016-09-11-Geomob-Presentation",
       "title": "Presenting to #Geomob",
-      "tags": []
+      "tags": [],
+      "onload": ""
     },
     {
       "path": "2016-06-01-Visualising-London",
