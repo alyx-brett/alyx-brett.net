@@ -223,6 +223,7 @@ img
       overflow-y: hidden
       @include shadow()
       padding: 1em
+  
       .fade
         position: absolute
         left: 0
@@ -240,6 +241,8 @@ img
       &.expanded
         // max-height: 500em
         transition-timing-function: ease-in
+        a
+          text-decoration: underline  
         .fade
           top: 498em
         .expander

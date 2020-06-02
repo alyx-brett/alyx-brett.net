@@ -1,114 +1,77 @@
-In this post, I'll derive expressions about rotations in spirograph systems. The first section runs through some simple number theory; you might choose to skip straight to section 2.
+$\DeclareMathOperator{\lcm}{lcm}$In this post, I'll derive expressions about rotations in spirograph systems.
 
 This builds on [Aaron's Post](https://www.wildgears.com/math-and-predictions.html), which is more accessible.
 
-## 1. Lowest Common Multiple and Greatest Common Divisor
+A useful reference for identities for $\gcd$ and $\lcm$ is https://www.cut-the-knot.org/arithmetic/GcdLcmProperties.shtml - I suggest at least glancing over it before proceeding.
 
-#### 1.1 Natural Numbers
+## 1 Simple Systems
 
-The natural numbers, written $\mathbb{N}$, are the numbers $1, 2, 3 \ldots$
-
-#### 1.2 Divisors
-
-A natural number ${A}$ *divides* or *is a divisor of* another natural number ${B}$ if there exists some natural number ${n}$ such that $nA = B$.
-
-We notate ${A}$ is a divisor of ${B}$ by $A|B$.
-
-#### 1.3 Greatest Common Divisor
-
-The *greatest common divisor* of ${A}$ and ${B}$ is
-
-> $gcd(A,B) = max \\{n \in \mathbb{N} \mid n|A\ \text{and}\ n|B \\}$
-
-If $X = \prod{p_{i}^{x_i}}$ is the prime factorisation of ${X}$, then
-
-> $gcd(A,B) = \prod{p_{i}^{min(a_i, b_i)}}$
-
-#### 1.4 Lowest Common Multiple
-
-The *lowest (or least) common multiple* of ${A}$ and ${B}$ is:
-
-> $lcm(A,B) = min \\{n \in \mathbb{N} \mid A|n\ \text{and}\ B|n \\}$
-
-If $X = \prod{p_{i}^{x_i}}$ is the prime factorisation of ${X}$, then
-
-> $gcd(A,B) =  \prod{p_{i}^{max(a_i, b_i)}}$
-
-#### 1.5 Relationship between GCD and LCM
-
-The following result makes manipulating LCM and GCD much easier:
-
-> $gcd(A,B)lcm(A,B)$
-
-> $= \prod{p_{i}^{min(a_i, b_i)}}\prod{p_{i}^{max(a_i, b_i)}}$
-
-> $= \prod{p_{i}^{min(a_i, b_i)max(a_i, b_i)}}$
-
-> $= \prod{p_{i}^{a_i b_i}}$
-
-> $= A B$
-
-Therefore:
-
-> $gcd(A,B) = \frac{AB}{lcm(A,B)}$
-
-## 2. Simple Patterns
-
-Suppose a part $\mathbf{A}$ with ${A}$ teeth rotates against a part $\mathbf{B}$ with ${B}$ teeth, for example a wheel inside a ring. Each time A rotates one full turn relative to B, it moves around ${A}$ teeth inside B, and the pattern it leaves will repeat once it returns to its starting point, i.e. when a whole number of rotations if ${A}$ corresponds with a whole number of traversals of ${B}$. As a simple example, if an 84 wheel rotates inside a 140 ring, then after 5 rotations of the wheel it would have travelled 420 teeth, which is 3 whole traversals.
+Suppose a part $\mathbf{B}$ with $B$ teeth rotates against a part $\mathbf{A}$ with $A$ teeth, for example a wheel inside a ring. Each time $\mathbf{B}$ rotates one full turn relative to $\mathbf{A}$, it moves around $B$ teeth inside $\mathbf{A}$. The pattern it leaves will repeat once it returns to its starting point, i.e. when a whole number of rotations of $\mathbf{B}$ corresponds with a whole number of traversals of $A$. As a simple example, if an 84 wheel rotates inside a 140 ring, then after 5 rotations of the wheel it would have travelled 420 teeth, which is 3 whole traversals.
 
 > ![A simple pattern](/assets/img/spiro/simple.jpg)
 
-So:
+Let $n, m \in \mathbb{N}$ such that $nB = mA$. 
 
-Let $n, m \in \mathbb{N}$ such that $nA = mB$. 
+Then $m\frac{A}{B} \in \mathbb{N}$, so $B|mA$.
 
-Then $m\frac{B}{A} \in \mathbb{N}$, so $A|mB$.
+But $A|mA$, so $\lcm(A,B)|mA$.
 
-But $B|mB$, so $lcm(A,B)|mB$.
+Thus the minimum $n, m$ satisfying $nB=mA$ are
 
-Thus the minimum $n, m$ satisfying $nA=mB$ are
+$$m = \frac{\lcm(A,B)}{A}$$
+$$n = \frac{\lcm(A,B)}{B} = \frac{A}{\gcd(A,B)}$$
 
-> $m = \frac{lcm(A,B)}{B}$
+#### 1.1 The number of points in a simple system
 
-> $n = \frac{lcm(A,B)}{A} = \frac{B}{gcd(A,B)}$
+In spirograph terms, the number of rotations of $\mathbf{B}$ for it to first return to the starting point is $A\over\gcd(A,B)$. This corresponds to the number of points.
 
-#### 2.1 The number of points in a simple pattern
+We will notate this going forwards as:
 
-In spirograph terms, the number of rotations of $\mathbf{A}$ for it to first return to the starting point is $B\over gcd(A,B)$. This corresponds to the number of points.
+$$ r(A,B) = \frac{A}{\gcd(A,B)} $$
 
-#### 2.2 The spacing between points in a simple pattern
+Note that the number of rotations around $\mathbf{A}$ that $\mathbf{B}$ completes in this time is $r(B,A)$.
 
-The gap between the points is $B \over \text{number of points}$, i.e. just $gcd(A,B)$.
+#### 1.2 The spacing between points in a simple system
 
-## 3. Compound Patterns
+The gap between the points is $\frac{A}{\text{number of points}}$, i.e. just $\gcd(A,B)$.
 
-In a compound pattern, a wheel $\mathbf{A}$ rotates inside a hole $\mathbf{B}$ cut from a wheel $\mathbf{C}$, which in turn rotates against a static $\mathbf{D}$, with teeth ${A}$, ${B}$, $C$, $D$ respectively.
+## 2 Compound Systems
+
+In a compound pattern, a wheel $\mathbf{D}$ rotates inside a hole $\mathbf{C}$ cut from a wheel $\mathbf{B}$, which in turn rotates against a static $\mathbf{A}$, with teeth $D$, $C$, $B$, $A$ respectively.
 
 ![A compound pattern](/assets/img/spiro/compound.jpg)
 
-Now we know from *(2.1)* that $\mathbf{C}$ will complete $D\over gcd(C,D)$ rotations inside $\mathbf{D}$, in which time $\mathbf{B}$ must also rotate the same number of times, since it is on the same piece. Thus, $\mathbf{A}$ must traverse a whole multiple of $B \frac{D}{gcd(C,D)}$ teeth to return to the starting point.
+Now we know from (1.1) that $\mathbf{B}$ will complete $r(A,B)=\frac{A}{\gcd(A,B)}$ rotations inside $\mathbf{A}$ before returning to its starting point, in which time $\mathbf{C}$ must also rotate the same number of times (since it is a different edge of the same piece). Thus, $\mathbf{D}$ must traverse some multiple of $C.r(A,B)$ teeth to return to the starting point.
 
-Therefore let $n, m \in \mathbb{N}$ such that $nA = mB\frac{D}{gcd(C,D)}$.
+Therefore let $n, m \in \mathbb{N}$ such that $nD = mC.r(A,B)$.
 
-Following the same logic as in Section 2, we can write down
+Following the same logic as in Section 1, we can write down
 
-> $m = \frac{lcm(A,B\frac{D}{gcd(C,D)})}{B\frac{D}{gcd(C,D)}}$
+$$m = \frac{\lcm(D,C.r(A,B))}{C.r(A,B)}$$
+$$n = \frac{\lcm(D,C.r(A,B))}{D}$$
 
-> $n = \frac{lcm(A,B\frac{D}{gcd(C,D)})}{A}$
+Some (lots of) rearrangement yields:
 
-#### 3.1 The number of rotations of the smallest part in a 3-part system
+$$\lcm(D,C.r(A,B)) = \lcm(C,D)\frac{lcm(A,BD)}{BD} = \lcm(C,D)r(A,BD)$$
+$$m = r(D,C)r(A,BD)$$
+$$n = r(C,D)r(A,BD)$$
 
-The smallest part ${A}$ will rotate 
-> $\frac{lcm(A,B\frac{D}{gcd(C,D)})}{A}$
+#### 2.1 The number of rotations of the smallest part in a 3-part system
+
+The number of rotations of $\mathbf{D}$ is: 
+
+$$r(C,D)r(A,BD)$$
 
 This will be the number of 'points' that the design has - although given the complexity of the movements involved, this may not be very visually apparent.
 
-#### 3.2 The number of rotations of the middle part in a 3-part system
+#### 2.2 The number of rotations of the middle part in a 3-part system
 
-The middle component (outer edge ${C}$, inner edge ${B}$) must rotate $m \frac{D}{gcd(C,D)}$ times, which is to say that the number of rotations is:
+The middle component (outer edge $B$, inner edge $C$) must rotate $m r(A,B)$ times, which is to say that the number of rotations is:
 
-> $\frac{lcm(A,B\frac{D}{gcd(C,D)})}{B}$
+$$r(D,C)r(A,BD)$$
 
-## 4. Wrapping up
+## 3 Wrapping up
 
 I found these results handy for working out which combinations of wheels and rings to use in my spirographing; the next things I'm planning to do are write about symmetries of spirographs and maybe at some point share a spreadsheet automating these calculations.
+
+I'm reasonably certain that the results here could form the basis for exploration of arbitrarily nested spirograph systems.

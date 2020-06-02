@@ -1,3 +1,5 @@
 <h1>{{post?.title}}</h1>
 <h2>{{post?.date | date }}</h2>
-<markdown [data]="post?.body" katex></markdown>
+<div mathjax #mathjax>
+<markdown [data]="post?.body" (ready)="onMarkdownLoad();"></markdown>
+</div>
