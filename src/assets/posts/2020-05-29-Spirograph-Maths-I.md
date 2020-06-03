@@ -25,7 +25,7 @@ $$n = \frac{\lcm(A,B)}{B} = \frac{A}{\gcd(A,B)}$$
 
 In spirograph terms, the number of rotations of $\mathbf{B}$ for it to first return to the starting point is $A\over\gcd(A,B)$. This corresponds to the number of points.
 
-We will notate this going forwards as:
+We will notate this as:
 
 $$ r(A,B) = \frac{A}{\gcd(A,B)} $$
 
@@ -50,17 +50,15 @@ Following the same logic as in Section 1, we can write down
 $$m = \frac{\lcm(D,C.r(A,B))}{C.r(A,B)}$$
 $$n = \frac{\lcm(D,C.r(A,B))}{D}$$
 
-Some (lots of) rearrangement yields:
+Some rearrangement yields:
 
-$$\lcm(D,C.r(A,B)) = \lcm(C,D)\frac{lcm(A,BD)}{BD} = \lcm(C,D)r(A,BD)$$
-$$m = r(D,C)r(A,BD)$$
-$$n = r(C,D)r(A,BD)$$
+$$\lcm(D,C.r(A,B)) = \frac{\lcm(AC,BC,BD)}{B}$$
 
 #### 2.1 The number of rotations of the smallest part in a 3-part system
 
 The number of rotations of $\mathbf{D}$ is: 
 
-$$r(C,D)r(A,BD)$$
+$$\frac{\lcm(AC,BC,BD)}{BD}$$
 
 This will be the number of 'points' that the design has - although given the complexity of the movements involved, this may not be very visually apparent.
 
@@ -68,7 +66,7 @@ This will be the number of 'points' that the design has - although given the com
 
 The middle component (outer edge $B$, inner edge $C$) must rotate $m r(A,B)$ times, which is to say that the number of rotations is:
 
-$$r(D,C)r(A,BD)$$
+$$\frac{C\lcm(AC,BC,BD)}{B}$$
 
 ## 3 Wrapping up
 
