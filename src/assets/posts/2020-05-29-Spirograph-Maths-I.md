@@ -21,17 +21,14 @@ $$m = \frac{\lcm(A,B)}{A}$$
 $$n = \frac{\lcm(A,B)}{B} = \frac{A}{\gcd(A,B)}$$
 
 <div class="centred">
-<ul class="captioned">
-<h3>A curve produced by a simple system.</h3>
-<li>
+<ul class="captioned two">
+<h3>A curve produced by a simple system.</h3><li>
 <img src="/assets/img/blog/spiro-maths-1/1a.jpg"/>
 The line changes colour each time $\mathbf{B}$ rotates once (12 times)...
-</li>
-<li>
+</li><li>
 <img src="/assets/img/blog/spiro-maths-1/1b.jpg"/>
 ...and here it changes colour each times $\mathbf{B}$ completes one circuit of $\mathbf{A}$ (7 times).
-</li>
-</ul>
+</li></ul>
 </div>
 
 #### 1.1 The number of points in a simple system
@@ -66,13 +63,12 @@ Some rearrangement yields:
 $$\lcm(D,C.r(A,B)) = \frac{\lcm(AC,BC,BD)}{B}$$
 
 <div class="centred">
-<ul class="captioned">
+<ul class="captioned two">
 <h3>A curve produced by a simple system.</h3>
 <li>
 <img src="/assets/img/blog/spiro-maths-1/2a.jpg"/>
 The line changes colour each time $\mathbf{D}$ rotates once (28 times)...
-</li>
-<li>
+</li><li>
 <img src="/assets/img/blog/spiro-maths-1/2b.jpg"/>...and here it changes colour each times $\mathbf{B}$ completes one circuit of $\mathbf{A}$ (14 times).
 </li>
 </ul>

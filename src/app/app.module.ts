@@ -18,7 +18,7 @@ import {MarkdownModule} from 'ngx-markdown';
     AppRoutingModule,
     BlogModule,
     HttpClientModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot({sanitize: SecurityContext.NONE})
   ],
   providers: [],
   bootstrap: [AppComponent]
