@@ -20,11 +20,11 @@ As in the last post, we consider a 3 part compound system with 4 edges: $\mathbf
 
 The number of total rotations of $\mathbf{D}$ is
 
-$$\rho_I = r(C,D)r(A,BD)$$
+$$\rho_I = \frac{\lcm(AC,BC,BD)}{BD}$$
 
 And the total number of rotations of $\mathbf{B}$ and $\mathbf{C}$ is 
 
-$$\rho_O = r(D,C)r(A,BD)$$
+$$\rho_O = \frac{C\lcm(AC,BC,BD)}{B}$$
 
 First consider a symmetrical system, i.e. where the middle piece is a ring having inner and outer curves parallel. The resulting curve will have rotational symmetry order $\rho_I$ and reflectional symmetry in $\rho_I$ axes in the same way as a simple system.
 
@@ -42,11 +42,9 @@ $$ |V| = \frac{D}{\gcd(C,D)} = r(D,C) $$
 
 Each member of $V$ corresponds to a distinct offset that $\mathbf{D}$ can have when $\mathbf{C}$ has rotated a whole number of times. These offsets will be evenly distributed, thus the number of times each offset will occur in one complete curve is
 
-$$\frac{\rho_O}{|V|} = r(A,BD)$$
+$$\frac{\rho_O}{|V|} = \frac{\rho_O}{r(D,C)}$$
 
-*This gives the order of rotational symmetry of the curve.*
-
-Corollary: A compound system has no rotational symmetry if and only if $A|BD$.
+This gives the order of rotational symmetry of the curve. I can't find an elegant simplification of this formula.
 
 #### 3.1 Rotation induced by offset in an asymmetrical system
 
