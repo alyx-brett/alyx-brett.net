@@ -10,7 +10,7 @@
       </a>
       <app-blog-post-tags [tags]="post?.tags"></app-blog-post-tags>
     </div>
-  <div class="pagination">
+  <div class="pagination" *ngIf="pageNumbers?.length > 1">
     <a
       *ngFor="let pageNumber of pageNumbers"
       [routerLink]=""

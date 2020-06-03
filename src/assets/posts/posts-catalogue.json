@@ -1,16 +1,9 @@
 {
-  "tags": [
-    "SFDC",
-    "CSharp",
-    "Git",
-    "Perl",
-    "Apex"
-  ],
   "posts": [
     {
       "path": "2020-05-29-Spirograph-Maths-I",
       "title": "Maths for Spirograph, Part I",
-      "tags": []
+      "tags": ["Spirograph", "Maths"]
     },
     {
       "path": "2017-12-12-How-to-Write-Async-Code",
@@ -22,13 +15,12 @@
     {
       "path": "2016-09-11-Geomob-Presentation",
       "title": "Presenting to #Geomob",
-      "tags": [],
-      "onload": ""
+      "tags": ["Javascript"]
     },
     {
       "path": "2016-06-01-Visualising-London",
       "title": "Visualising London",
-      "tags": []
+      "tags": ["Javascript"]
     },
     {
       "path": "2015-08-28-Git-Branching-Tools",
@@ -138,7 +130,7 @@
     {
       "path": "2014-08-29-Mandelbrot-set",
       "title": "The Mandelbrot set in Javascript",
-      "tags": []
+      "tags": ["Javascript"]
     },
     {
       "path": "2014-08-21-Run-all-tests-in-a-Salesforce-deployment",

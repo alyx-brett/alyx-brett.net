@@ -58,10 +58,15 @@ export class BlogService {
     private http: HttpClient
   ) {
     this.posts = postsCatalogue.posts;
-    this.tags = postsCatalogue.tags;
-    this.numberOfPages = this.posts.length
-      ? Math.ceil(this.posts.length / this.postsPerPage )
-      : 0;
+    this.tags = Array.from(new Set(this.posts
+    .reduce((a,p) => a.concat(p.tags), <string[]> [])));
+    this.numberOfPages = this.calcNumberOfPages(this.posts.length)
+  }
+
+  private calcNumberOfPages(length: number): number {
+    return length
+    ? Math.ceil(length / this.postsPerPage )
+    : 0;
   }
 
   readonly fetchedPosts = new Map<string, BlogPostViewModel>();
@@ -94,7 +99,7 @@ export class BlogService {
     if (!tag) {
       return this.getPageNoTag(pageNumber);
     }
-    const posts = this.posts.filter(p => p.tags.indexOf(posts) > -1);
+    const posts = this.posts.filter(p => p.tags.indexOf(tag) > -1);
     return this.fetchThePages(pageNumber, posts, tag);
   }
 
@@ -113,7 +118,7 @@ export class BlogService {
       .pipe(
         map(
           (posts: BlogPostViewModel[]) => {
-            return new BlogPageViewModel(pageNumber, this.numberOfPages, posts, tag);
+            return new BlogPageViewModel(pageNumber, this.calcNumberOfPages(blogPostRecords.length), posts, tag);
           }
         )
       );

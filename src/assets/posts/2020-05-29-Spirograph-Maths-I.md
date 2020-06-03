@@ -6,9 +6,8 @@ A useful reference for identities for $\gcd$ and $\lcm$ is https://www.cut-the-k
 
 ## 1 Simple Systems
 
-Suppose a part $\mathbf{B}$ with $B$ teeth rotates against a part $\mathbf{A}$ with $A$ teeth, for example a wheel inside a ring. Each time $\mathbf{B}$ rotates one full turn relative to $\mathbf{A}$, it moves around $B$ teeth inside $\mathbf{A}$. The pattern it leaves will repeat once it returns to its starting point, i.e. when a whole number of rotations of $\mathbf{B}$ corresponds with a whole number of traversals of $A$. As a simple example, if an 84 wheel rotates inside a 140 ring, then after 5 rotations of the wheel it would have travelled 420 teeth, which is 3 whole traversals.
+Suppose a part $\mathbf{B}$ with $B$ teeth rotates against a part $\mathbf{A}$ with $A$ teeth, for example a wheel inside a ring. Each time $\mathbf{B}$ rotates one full turn relative to $\mathbf{A}$, it moves around $B$ teeth inside $\mathbf{A}$. The pattern it leaves will repeat once it returns to its starting point, i.e. when a whole number of rotations of $\mathbf{B}$ corresponds with a whole number of traversals of $A$. For example, if an 63 wheel rotates inside a 108 ring, then after 12 rotations it travels 756 teeth, which is 7 whole traversals.
 
-> ![A simple pattern](/assets/img/spiro/simple.jpg)
 
 Let $n, m \in \mathbb{N}$ such that $nB = mA$. 
 
@@ -20,6 +19,20 @@ Thus the minimum $n, m$ satisfying $nB=mA$ are
 
 $$m = \frac{\lcm(A,B)}{A}$$
 $$n = \frac{\lcm(A,B)}{B} = \frac{A}{\gcd(A,B)}$$
+
+<div class="centred">
+<ul class="captioned">
+<h3>A curve produced by a simple system.</h3>
+<li>
+<img src=/assets/img/blog/spiro-maths-1/1a.jpg/>
+The line changes colour each time $\mathbf{B}$ rotates once (12 times)...
+</li>
+<li>
+<img src=/assets/img/blog/spiro-maths-1/1b.jpg/>
+...and here it changes colour each times $\mathbf{B}$ completes one circuit of $\mathbf{A}$ (7 times).
+</li>
+</ul>
+</div>
 
 #### 1.1 The number of points in a simple system
 
@@ -39,8 +52,6 @@ The gap between the points is $\frac{A}{\text{number of points}}$, i.e. just $\g
 
 In a compound pattern, a wheel $\mathbf{D}$ rotates inside a hole $\mathbf{C}$ cut from a wheel $\mathbf{B}$, which in turn rotates against a static $\mathbf{A}$, with teeth $D$, $C$, $B$, $A$ respectively.
 
-![A compound pattern](/assets/img/spiro/compound.jpg)
-
 Now we know from (1.1) that $\mathbf{B}$ will complete $r(A,B)=\frac{A}{\gcd(A,B)}$ rotations inside $\mathbf{A}$ before returning to its starting point, in which time $\mathbf{C}$ must also rotate the same number of times (since it is a different edge of the same piece). Thus, $\mathbf{D}$ must traverse some multiple of $C.r(A,B)$ teeth to return to the starting point.
 
 Therefore let $n, m \in \mathbb{N}$ such that $nD = mC.r(A,B)$.
@@ -54,6 +65,19 @@ Some rearrangement yields:
 
 $$\lcm(D,C.r(A,B)) = \frac{\lcm(AC,BC,BD)}{B}$$
 
+<div class="centred">
+<ul class="captioned">
+<h3>A curve produced by a simple system.</h3>
+<li>
+<img src=/assets/img/blog/spiro-maths-1/2a.jpg/>
+The line changes colour each time $\mathbf{D}$ rotates once (28 times)...
+</li>
+<li>
+<img src=/assets/img/blog/spiro-maths-1/2b.jpg/>...and here it changes colour each times $\mathbf{B}$ completes one circuit of $\mathbf{A}$ (14 times).
+</li>
+</ul>
+</div>
+
 #### 2.1 The number of rotations of the smallest part in a 3-part system
 
 The number of rotations of $\mathbf{D}$ is: 
@@ -64,7 +88,7 @@ This will be the number of 'points' that the design has - although given the com
 
 #### 2.2 The number of rotations of the middle part in a 3-part system
 
-The middle component (outer edge $B$, inner edge $C$) must rotate $m r(A,B)$ times, which is to say that the number of rotations is:
+The middle component (outer edge $B$, inner edge $C$) must rotate $m.r(A,B)$ times, which is to say that the number of rotations is:
 
 $$\frac{C\lcm(AC,BC,BD)}{B}$$
 

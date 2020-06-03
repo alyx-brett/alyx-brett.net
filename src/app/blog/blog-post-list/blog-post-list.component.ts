@@ -16,19 +16,25 @@ export class BlogPostListComponent implements OnInit {
 
   constructor(
     private blogService: BlogService,
-    private route: ActivatedRoute,
-    private router: Router
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.route.queryParamMap
-      .subscribe((paramMap: ParamMap) => {
-        this.blogService.getPage(parseInt(paramMap.get('page'), 10) || 0, paramMap.get('tag') || null).subscribe((page: BlogPageViewModel) => {
-          this.blogPage = page;
-          this.posts = page.posts;
-          this.pageNumbers = Array.from(Array(this.blogPage.numberOfPages).keys());
-        });
-      });
+      .subscribe((paramMap: ParamMap) => { this.updatePage(paramMap)});
+  }
+
+  private updatePage(paramMap : ParamMap){
+     this.blogService
+    .getPage(
+      parseInt(paramMap.get('page'), 10) || 0,
+      paramMap.get('tag') || null)
+      .subscribe((page: BlogPageViewModel) => {
+      this.blogPage = page;
+      this.posts = page.posts;
+      this.pageNumbers = Array.from(Array(this.blogPage.numberOfPages).keys());
+    });
+
   }
 
 }
