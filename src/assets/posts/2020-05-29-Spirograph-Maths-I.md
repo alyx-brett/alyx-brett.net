@@ -24,11 +24,11 @@ $$n = \frac{\lcm(A,B)}{B} = \frac{A}{\gcd(A,B)}$$
 <ul class="captioned">
 <h3>A curve produced by a simple system.</h3>
 <li>
-<img src=/assets/img/blog/spiro-maths-1/1a.jpg/>
+<img src="/assets/img/blog/spiro-maths-1/1a.jpg"/>
 The line changes colour each time $\mathbf{B}$ rotates once (12 times)...
 </li>
 <li>
-<img src=/assets/img/blog/spiro-maths-1/1b.jpg/>
+<img src="/assets/img/blog/spiro-maths-1/1b.jpg"/>
 ...and here it changes colour each times $\mathbf{B}$ completes one circuit of $\mathbf{A}$ (7 times).
 </li>
 </ul>
@@ -69,11 +69,11 @@ $$\lcm(D,C.r(A,B)) = \frac{\lcm(AC,BC,BD)}{B}$$
 <ul class="captioned">
 <h3>A curve produced by a simple system.</h3>
 <li>
-<img src=/assets/img/blog/spiro-maths-1/2a.jpg/>
+<img src="/assets/img/blog/spiro-maths-1/2a.jpg"/>
 The line changes colour each time $\mathbf{D}$ rotates once (28 times)...
 </li>
 <li>
-<img src=/assets/img/blog/spiro-maths-1/2b.jpg/>...and here it changes colour each times $\mathbf{B}$ completes one circuit of $\mathbf{A}$ (14 times).
+<img src="/assets/img/blog/spiro-maths-1/2b.jpg"/>...and here it changes colour each times $\mathbf{B}$ completes one circuit of $\mathbf{A}$ (14 times).
 </li>
 </ul>
 </div>
