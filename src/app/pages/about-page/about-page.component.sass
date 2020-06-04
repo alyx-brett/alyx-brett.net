@@ -1,0 +1,53 @@
+@mixin logo($logo-url, $width)
+    &:before
+        content: ''
+        display: inline-block
+        background-image:  url($logo-url)
+        background-repeat: no-repeat
+        background-size: $width 21px
+        height: 21px
+        width: 30px
+        bottom: -5px
+        position: relative
+        margin-right: 10px
+    
+.instagram
+    @include logo("/assets/logos/instagram.svg", 21px)
+
+.email
+    //  http://picol.org/
+    @include logo("/assets/logos/Mail.svg", 21px)
+
+.github
+    @include logo("/assets/logos/GitHub-Mark.svg", 30px)
+    &::before
+        background-size: 24px 24px
+
+.youtube:before
+    content: ""
+    display: inline-block
+    background-image: url(/assets/logos/yt_icon_mono_light.svg)
+    background-repeat: no-repeat
+    background-size: 24px 40px
+    background-position-y: -11px
+    height: 21px
+    width: 30px
+    bottom: -5px
+    position: relative
+    margin-right: 10px
+    overflow: visible
+
+h2
+    margin: 10px
+    text-transform: none
+    a
+        color: #555555
+        &:hover
+            text-decoration: underline
+
+#blog
+    text-align: center
+    .blog-post
+        text-align: left
+        display: inline-block
+        width: initial !important

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './core/title/title.component';
 import { AppRoutingModule } from './services/app-routing.module';
 import { BlogModule } from './blog/blog.module';
-import {MarkdownModule} from 'ngx-markdown';
+import { MarkdownModule } from 'ngx-markdown';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitleComponent
+    TitleComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@ import { MathjaxService } from '../../services/mathjax.service';
 @Component({
   selector: 'app-blog-post',
   templateUrl: './blog-post.component.html',
-  styleUrls: ['./blog-post.component.css']
+  styles: ['']
 })
 export class BlogPostComponent {
 

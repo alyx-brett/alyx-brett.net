@@ -154,18 +154,23 @@ header
   width: 100%
   @include shadow()
   h1
-    white-space: nowrap
-    font-size: 5em
+    font-size: 10vw
     letter-spacing: 0.2em
-    margin: 0.5em
+    margin: 35px
+    margin-top: 0
     font-family: RalewayThin
+    height: 80px
+    line-height: 80px
+    overflow: hidden
+    @media screen and (min-width: 700px)
+      font-size: 70px
   a
     display: inline-block
     margin: 0 auto 0 auto
     text-align: center
   ul
     text-transform: uppercase
-    margin: 0 auto 0 auto
+    // margin: 0 auto 0 auto
     display: table
     table-layout: fixed
     letter-spacing: 0.1em
@@ -174,6 +179,7 @@ header
       display: table-cell
       height: 1em
       padding: 1em
+      padding-bottom: 0
       overflow: hidden
 
 .back
@@ -241,12 +247,6 @@ ul.captioned
   #blog
     @extend #contentDiv
     @include scrollbar()
-    h2:before      
-      content: ''
-      display: block
-      height:      15em
-      margin-top: -15em
-      font-size: $fontsize
     .blog-post
       width: 90%
       max-width: 80em
@@ -257,8 +257,7 @@ ul.captioned
       transition-timing-function: cubic-bezier(0,1,0.5,1)
       overflow-y: hidden
       @include shadow()
-      padding: 1em
-  
+      padding: 1em  
       .fade
         position: absolute
         left: 0
