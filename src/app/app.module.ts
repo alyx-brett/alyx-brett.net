@@ -8,12 +8,14 @@ import { AppRoutingModule } from './services/app-routing.module';
 import { BlogModule } from './blog/blog.module';
 import { MarkdownModule } from 'ngx-markdown';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { XmasComponent } from './pages/xmas/xmas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    XmasComponent
   ],
   imports: [
     BrowserModule,

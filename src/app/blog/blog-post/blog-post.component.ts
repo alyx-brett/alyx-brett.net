@@ -1,4 +1,4 @@
-import {Component, Input, ViewChild, OnInit, AfterViewChecked, OnChanges, ElementRef} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {BlogPostViewModel} from '../../services/blog/blog.service';
 import { MathjaxService } from '../../services/mathjax.service';
 

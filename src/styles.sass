@@ -20,6 +20,7 @@ $fontsize: 14px
 //  background-color: white
 
 
+
 .dark
   color: $mgrey
   background: $dgrey
@@ -96,6 +97,19 @@ $fontsize: 14px
 //  padding: 0.1em 1em 0em 1em
 //  //@include Xscrollbar()
 
+.spoiler
+  @include shadow()
+  margin-left: 5em
+  width: 70%
+  padding: 1em
+  &:not(.open)
+    &::before
+        visibility: visible
+        content: "Click me!"
+        @include shadow()
+        margin-left: 5em
+        padding: 1em
+    visibility: hidden
 
 html
   height: 100%

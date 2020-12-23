@@ -1,9 +1,14 @@
 {
   "posts": [
     {
+      "path": "2020-12-23-My-Best-Boulevardier",
+      "title": "My Best Boulevardier",
+      "tags": []
+    },
+    {
       "path": "2020-06-02-Spirograph-Maths-II",
       "title": "Maths for Spirograph, Part II: Symmetry",
-      "tags": []
+      "tags": ["Spirograph", "Maths"]
     },
     {
       "path": "2020-05-29-Spirograph-Maths-I",
